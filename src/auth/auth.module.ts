@@ -13,6 +13,7 @@ import { UserEntity } from 'src/user/user.entity'
   providers: [AuthService, JwtStrategy], // тут мы добавили нашу стратегию JwtStrategy ту что мы прописали
   //далее подключаем и делаем наши импорты
   imports: [
+    ConfigModule,
     JwtModule.registerAsync({
       imports: [ConfigModule],
       inject: [ConfigService],

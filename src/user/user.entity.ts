@@ -19,14 +19,14 @@ export class UserEntity extends Base {
   @Column({ default: false, name: 'is_verified' }) // name- мы переназначаем как у нас будет называться в базе данных
   isVerified: boolean
 
-  @Column({ default: 0, name: 'subscribes_count' })
+  @Column({ default: 0, name: 'subscribers_count' })
   subscribersCount?: number
 
   @Column({ default: '', type: 'text' }) // text - выдается больше места вбазе данных
   description: string
 
   @Column({ default: '', name: 'avatar_path' })
-  avatarPath?: string
+  avatarPath: string
 
   //связываемые поля
   //это мы делаем например для того чтобы получить все идео данного пользователя для этого применяется связывание

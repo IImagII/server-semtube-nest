@@ -6,12 +6,12 @@ import {
 } from 'typeorm'
 
 export abstract class Base {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn() // чтобы автоматически генерировался
   id: number
 
   @CreateDateColumn({ name: 'created_at' })
   createdAt: Date
 
   @UpdateDateColumn({ name: 'updated_at' })
-  updateAt: Date
+  updatedAt: Date
 }

@@ -1,6 +1,6 @@
 //это для того чтобы отображать кто на кого подписан
 import { Base } from 'src/utils/base'
-import { Entity, ManyToMany, OneToMany, JoinColumn } from 'typeorm'
+import { Entity, ManyToMany, JoinColumn } from 'typeorm'
 import { UserEntity } from './user.entity'
 
 @Entity('Subscription')

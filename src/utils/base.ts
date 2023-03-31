@@ -10,7 +10,7 @@ export abstract class Base {
   id: number
 
   @CreateDateColumn({ name: 'created_at' })
-  createAt: Date
+  createdAt: Date
 
   @UpdateDateColumn({ name: 'updated_at' })
   updateAt: Date

@@ -18,7 +18,7 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
     super({
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(), // тут прописываем откуда мы берем jwt тут мі вітаскиваем наш токен
       ignoreExpiration: true,
-      secretOfKey: configService.get('JWT_SECRET') //тут мы берем наш секретный ключ
+      secretOrKey: configService.get('JWT_SECRET') //тут мы берем наш секретный ключ
     })
   }
   async validate({ id }: Pick<UserEntity, 'id'>) {

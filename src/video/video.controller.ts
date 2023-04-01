@@ -22,10 +22,10 @@ export class VideoController {
   constructor(private readonly videoService: VideoService) {}
 
   //тут получаем конкретное video которое доступно только нашему user(для того чтобы этор видео отредактировать)
-  @Get('get/private/:id') // это типа запрос в данным случае это GET
+  @Get('get-private/:id') // это типа запрос в данным случае это GET
   @Auth() // потомучтоу нас это защищенный роутинг мы его берем из нашего файла auth.decorator.ts то есть показываем что доступ только для авторизированных пользователей
   async getVideoPrivate(@Param('id') id: string) {
-    //@CurrentUser -мы взяли из нашего декоратора
+    return this.videoService.byId(+id)
   }
 
   //полуычение всех видео по поиску
